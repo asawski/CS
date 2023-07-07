@@ -1,2 +1,3 @@
-﻿// See https://aka.ms/new-console-template for more information
-Console.WriteLine("hello C#");
+﻿Console.Write("Bir sayı giriniz: ");
+string input = Console.ReadLine();
+Console.WriteLine("Girdiğiniz sayı: " + input);
