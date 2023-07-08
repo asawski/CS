@@ -1,22 +1,39 @@
 ﻿string inputText = "";
-int inputNumber;
+string inputText2 = "";
 
-bool isInteger()
+bool IsInteger(string input, int number = 0) // we just need this function for bool thing. result is useless in TryParse()
 {
-    return int.TryParse(inputText, out inputNumber);
+    return int.TryParse(input, out number);
 }
 
-while (!isInteger())
+void InvalidInputError()
+{
+    Console.WriteLine("Girdiğiniz bir sayı değil.");
+}
+
+while (!IsInteger(inputText))
 {
     Console.Write("Bir sayı giriniz: ");
     inputText = Console.ReadLine();
 
-    if (isInteger())
+    if (!IsInteger(inputText))
     {
-        Console.WriteLine("Girdiğiniz sayı: " + inputNumber);
+        InvalidInputError();
     }
-    else
+}
+
+while (!IsInteger(inputText2))
+{
+    Console.Write("2. bir sayı giriniz: ");
+    inputText2 = Console.ReadLine();
+
+    if (!IsInteger(inputText2))
     {
-        Console.WriteLine("Girdiğiniz bir sayı değil.");
+        InvalidInputError();
     }
+}
+
+for (int i = 0; i < Convert.ToInt32(inputText2); i++)
+{
+    Console.WriteLine("Girdiğiniz sayı: " + inputText);
 }
