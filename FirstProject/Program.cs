@@ -11,9 +11,11 @@ while (!isInteger())
     Console.Write("Bir sayı giriniz: ");
     inputText = Console.ReadLine();
 
-    if (isInteger()) {
+    if (isInteger())
+    {
         Console.WriteLine("Girdiğiniz sayı: " + inputNumber);
-    } else
+    }
+    else
     {
         Console.WriteLine("Girdiğiniz bir sayı değil.");
     }
