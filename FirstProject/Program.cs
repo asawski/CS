@@ -17,7 +17,7 @@ do
         isValidDataEntered = true;
     }
 }
-while (!isValidDataEntered &&!inputText.Equals("EXIT"));
+while (!isValidDataEntered && !inputText.Equals("EXIT"));
 
 int loopCount;
 isValidDataEntered = false;
@@ -32,14 +32,14 @@ do
     }
     else
     {
-        isValidDataEntered= true;
+        isValidDataEntered = true;
     }
 }
 while (!isValidDataEntered && !inputText2.Equals("EXIT"));
 
 for (int i = 0; i < loopCount; i++) // i didnt use a variable for here, but the new function i wrote is suitable for usage from anywhere
 {
-    Console.WriteLine("Girdiğiniz sayı: " + numberForPrint);
+    Console.WriteLine($"Girdiğiniz sayı: {numberForPrint}");
 }
 
 bool IsInteger(string inputText, out int number)
